@@ -1,6 +1,6 @@
-# pppppp
+# Read Me Generator
 # Description
- mmmmmm
+ This app generates a professional quality README file.
   
 # Table of Contents
 1. [Installation](#installation)
@@ -11,10 +11,10 @@
 6. [Questions](#questions)
 
 # Installation 
-nnnnnn
+Run npm install in the terminal.
 
 # Usage
-oooooo
+Anyone is free to use this app.
 
 # License
 This app is licensed under the following license:
@@ -25,10 +25,10 @@ GNU General Public License v3.0
 https://www.gnu.org/licenses/gpl-3.0
 
 # Contributing
-qqqqqq
+Just send me a note.
 
 # Tests
-rrrrrr
+Run npm install in the terminal. Type node index.js to run the app and answer the questions.
 
 # Questions
 
