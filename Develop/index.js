@@ -76,7 +76,7 @@ function init() {
     .then((response) => {
         const markDown = generateMarkdown(response);
        console.log(markDown);  
-        writeToFile('LizFile.md',markDown)   
+        writeToFile('README.md',markDown)   
     });
     // use inq to ask questions
     // then get answers

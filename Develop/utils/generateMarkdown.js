@@ -2,18 +2,18 @@
 
 const licenseChosen = {
   'Apache License v2.0': {
-    badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)]',
-    link: '(https://opensource.org/licenses/Apache-2.0)',
+    badge: '![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)',
+    link: 'https://opensource.org/licenses/Apache-2.0',
   },
 
   'GNU General Public License v3.0': {
-    badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]',
-    link: '(https://www.gnu.org/licenses/gpl-3.0)'
+    badge: '![License](https://img.shields.io/badge/License-GPLv3-blue.svg)',
+    link: 'https://www.gnu.org/licenses/gpl-3.0'
   },
 
   'MIT License': {
-    badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]',
-    link: '(https://opensource.org/licenses/MIT)'
+    badge: '![License](https://img.shields.io/badge/License-MIT-yellow.svg)',
+    link: 'https://opensource.org/licenses/MIT'
   }
 
   // look at syntax so I'm specifying license
@@ -63,10 +63,15 @@ function generateMarkdown(response) {
 # Installation 
 ${response.installation}
 
+# Usage
+${response.usage}
+
 # License
 ${response.license}
 
 ${renderLicenseBadge(response.license)}
+
+${renderLicenseLink(response.license)}
 
 # Contributing
 ${response.contribution}
