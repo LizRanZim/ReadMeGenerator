@@ -2,14 +2,20 @@
 
 const licenseChosen = {
   'Apache License v2.0': {
-    badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)',
+    badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-yellowgreen.svg)]',
     link: '(https://opensource.org/licenses/Apache-2.0)',
   },
 
-  GNU: {
+  'GNU General Public License v3.0': {
     badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]',
     link: '(https://www.gnu.org/licenses/gpl-3.0)'
   }
+
+  'MIT License': {
+    badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]',
+    link: '(https://opensource.org/licenses/MIT)'
+  }
+
   // look at syntax so I'm specifying license
 }
 
@@ -40,29 +46,42 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
 
-  // let title = `${response.title}`;
-  // console.log(title);
-  // let description = `${response.description}`;
-  // console.log(description);
-  // let installation = `${response.installation}`;
-  // console.log(installation);
-  // let usage = `${response.usage}`;
-  // console.log(usage);
-  // let contribution = `${response.contribution}`;
-  // console.log(contribution);
-  // let testing = `${response.testing}`;
-  // console.log(testing);
-  // let license = `${response.license}`;
-  // console.log(license);
-  // let gitHubuser = `${response.gitHubuser}`;
-  // console.log(gitHubuser);
-  // let email = `${response.email}`;
-  // console.log(email);
+
 
   return `# ${response.title}
-    ## ${response.description}
+# Description
+ ${response.description}
+  
+# Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
+
+# Installation 
+${response.installation}
+
+# License
+${response.license}
 
 ${renderLicenseBadge(response.license)}
+
+# Contributing
+${response.contribution}
+
+# Tests
+${response.testing}
+
+# Questions
+
+Contact the creator of this app using the links below.
+
+Github: https://github.com/` + `${response.gitHubuser}
+
+
+Email: ${response.email}
     
     `
 
