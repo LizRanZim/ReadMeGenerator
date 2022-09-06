@@ -16,7 +16,6 @@ const licenseChosen = {
     link: 'https://opensource.org/licenses/MIT'
   }
 
-  // look at syntax so I'm specifying license
 }
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -38,16 +37,14 @@ function renderLicenseLink(license) {
 }
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// This function wasn't needed in the end
 function renderLicenseSection(license) {
 
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
-
-
-
+  
   return `# ${response.title}
 # Description
  ${response.description}
@@ -67,6 +64,7 @@ ${response.installation}
 ${response.usage}
 
 # License
+This app is licensed under the following license:
 ${response.license}
 
 ${renderLicenseBadge(response.license)}
@@ -87,12 +85,11 @@ Github: https://github.com/` + `${response.gitHubuser}
 
 
 Email: ${response.email}
-    
+  
     `
-
     ;
 }
-// all one giant string use line break syntax /n----- look that up
+
 
 
 module.exports = generateMarkdown;

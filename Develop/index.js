@@ -3,9 +3,6 @@
 const fs = require('fs');
 const inquirer = require ('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const genMd = require('./utils/generateMarkdown');
-
-
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -75,23 +72,17 @@ function init() {
     .prompt(questions)
     .then((response) => {
         const markDown = generateMarkdown(response);
+
+    // Console logs the markdown
        console.log(markDown);  
         writeToFile('README.md',markDown)   
     });
-    // use inq to ask questions
-    // then get answers
-    // -- use answers to gen markdown
-    // *** const mdAsString = genMd(response) // assuming you called you inq obj response
-    // // -- call writeToFile
+
 };
 
 // Function call to initialize app
 init();
 
-// Office hours: how to pass the data to the generate markdown function so it can use the data to create the readme file
 
-// Next steps create a github repository and do some commits of this code while you have node index.js working
-
-// stringify the readme file syntax from your sample file and put the variables in it, and put that in the generate markdown function to see if you can start generating a basic file with the data
 
 

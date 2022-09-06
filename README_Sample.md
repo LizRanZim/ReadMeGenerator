@@ -1,9 +1,9 @@
 # Title
 
-## Description
+# Description
 User input
 
-## Table of Contents
+# Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [License](#license)
